@@ -8,6 +8,8 @@
   --address-contact: rgba(255, 255, 255, 0.6);
   --border-color: #ececec;
   --border-secondary-color: #eeeeee;
+  --background-hero: rgba(47, 48, 58, 0.4);
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
   background-color: var(--secondary);
 }
 
-.ul {
+ul {
   margin: 0;
   padding: 0;
 }
@@ -42,6 +44,7 @@ p {
 }
 
 .page-header {
+  max-width: 1600px;
   border-bottom: 1px solid var(--border-color);
 }
 .section {
@@ -110,12 +113,17 @@ p {
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title);
+}
+.nav-text {
+  margin-left: 10px;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -137,9 +145,28 @@ p {
   color: var(--accent);
 }
 
+.nav-contacts-item .icon {
+  fill: var(--primere-text);
+}
+
+.nav-contacts-item:focus .icon,
+.nav-contacts-item:hover .icon {
+  fill: var(--accent);
+}
 /* секция героя */
 .hero {
   background: var(--background);
+  background-image: linear-gradient(
+      to right,
+      var(--background-hero),
+      var(--background-hero)
+    ),
+    url("../images/hero_img.jpg");
+  background-position: center;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -206,6 +233,29 @@ p {
   line-height: 1.71;
 }
 
+.pas-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: var(--background-team);
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url("../images/antenna.svg");
+}
+.icon-clock::before {
+  background-image: url("../images/clock.svg");
+}
+.icon-diagram::before {
+  background-image: url("../images/diagram.svg");
+}
+.icon-astronaut::before {
+  background-image: url("../images/astronaut.svg");
+}
+
 /* работы */
 .work-list {
   display: flex;
@@ -233,6 +283,8 @@ img {
 /* наша команда */
 .background-team {
   background-color: var(--background-team);
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .team-list {
   display: flex;
@@ -267,10 +319,32 @@ img {
 }
 
 .user-text {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
 }
+.team-list-icon {
+  display: flex;
+  list-style-type: none;
+}
 
+.team-item-icon {
+  width: calc((100% -88px) / 4);
+  margin-right: 10px;
+}
+
+.team-item-icon:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team-item-icon .icon-link:hover {
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+/* .icon-social {
+  padding: 22px;
+} */
 /* наши клиенты */
 .clients-list {
   display: flex;
@@ -293,6 +367,8 @@ img {
   background-color: var(--background);
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 .address {
   margin-top: 20px;
