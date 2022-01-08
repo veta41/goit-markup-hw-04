@@ -270,6 +270,23 @@ img {
   font-size: 16px;
   line-height: 1.19;
 }
+
+/* наши клиенты */
+.clients-list {
+  display: flex;
+  text-align: center;
+  list-style: none;
+}
+
+.clients-item {
+  width: calc((100% -150px) / 6);
+  margin-right: 30px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 0;
+}
+
 /* подвал сайта */
 
 .footer {
