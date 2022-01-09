@@ -17,41 +17,41 @@
 <body>
 
   <header class="page-header">
-  <div class="container main-nav">
-    <nav class="site-nav">
-      <a class=" nav-logo" href="./index.html">Web<span class="accent">Studio</span></a>
+    <div class="container main-nav">
+      <nav class="site-nav">
+        <a class=" nav-logo" href="./index.html">Web<span class="accent">Studio</span></a>
   
-      <ul class=" nav-list">
-        <li class="  nav-item">
-          <a class="nav-link" href="./index.html">Студия</a>
+        <ul class=" nav-list">
+          <li class="  nav-item ">
+            <a class="nav-link active" href="./index.html">Студия</a>
+          </li>
+          <li class=" nav-item">
+            <a class="nav-link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class=" nav-item">
+            <a class="nav-link" href="">Контакты</a>
+          </li>
+        </ul>
+  
+      </nav>
+      <ul class=" nav-contacts-list">
+        <li class="nav-contacts-item ">
+          <a class="nav-link" href="mailto:info@devstudio.com">
+            <svg class="icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            <span class="nav-text">info@devstudio.com</a></span>
         </li>
-        <li class=" nav-item ">
-          <a class="nav-link active" href="./portfolio.html">Портфолио</a>
-        </li>
-        <li class=" nav-item">
-          <a class="nav-link" href="">Контакты</a>
+        <li class="nav-contacts-item ">
+          <a class="nav-link" href="tel:+380961111111">
+            <svg class="icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            <span class="nav-text">+38 096 111 11 11</a></span>
         </li>
       </ul>
-  
-    </nav>
-    <ul class=" nav-contacts-list">
-      <li class="nav-contacts-item ">
-        <a class="nav-link" href="mailto:info@devstudio.com">
-          <svg class="icon" width="20" height="20">
-            <use href="./images/symbol-defs.svg#icon-envelope"></use>
-          </svg>
-          <span class="nav-text">info@devstudio.com</a></span>
-      </li>
-      <li class="nav-contacts-item ">
-        <a class="nav-link" href="tel:+380961111111">
-          <svg class="icon" width="20" height="20">
-            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-          </svg>
-          <span class="nav-text">+38 096 111 11 11</a></span>
-      </li>
-    </ul>
-  </div>
-      </header>
+    </div>
+  </header>
       
       <main>
         <section class="section">
@@ -181,28 +181,60 @@
         </section>
       </main>
       
-      <footer class=" footer">
-        <div class="container">
-          <a href="#" class=" nav-logo ">Web<span class="accent-fr">Studio</span></a>
+      <footer class="  footer">
+        <div class="container ">
+          <div class="footer-flex">
+            <div class="contact">
+              <a href="#" class=" nav-logo ">Web<span class="accent-fr">Studio</span></a>
       
-          <address class="address">
-            <ul class=" address-list">
-              <li class="address-item">
-                <a class="address-link-contact address-link-color"
-                  href="https://www.google.com/maps/d/viewer?msa=0&mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.42732700000001%2C30.538092&z=17"
-                  target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
-              </li>
-              <li class="address-item">
-                <a class="address-link-contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
-              </li>
-              <li class="address-item">
-                <a class="address-link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
-              </li>
-            </ul>
+              <address class="address">
+                <ul class="address-list">
+                  <li class="address-item">
+                    <a class="address-link-contact address-link-color"
+                      href="https://www.google.com/maps/d/viewer?msa=0&mid=10uSM3H-mIU3GznYo2szRIEphczw&ll=50.42732700000001%2C30.538092&z=17"
+                      target="_blank">г. Киев, пр-т Леси Украинки, 26</a>
+                  </li>
+                  <li class="address-item">
+                    <a class="address-link-contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                  </li>
+                  <li class="address-item">
+                    <a class="address-link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                  </li>
+                </ul>
       
-          </address>
+              </address>
+            </div>
+            <div class="plea">
+              <p class="plea-text">Присоединяйтесь</p>
+              <ul class="plea-list">
+                <li class="plea-item"><a class="plea-link" href="">
+                    <svg class="icon-plea-social" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="plea-item"><a class="plea-link" href="">
+                    <svg class="icon-plea-social" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="plea-item"><a class="plea-link" href="">
+                    <svg class="icon-plea-social" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="plea-item"><a class="plea-link" href="">
+                    <svg class="icon-plea-social" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      
       </footer>
 
    

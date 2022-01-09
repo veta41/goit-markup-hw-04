@@ -22,6 +22,7 @@ body {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .visually-hidden {
@@ -79,7 +80,6 @@ p {
 
 .nav-list {
   display: flex;
-  list-style: none;
 }
 
 .nav-list .nav-link {
@@ -94,10 +94,10 @@ p {
 .nav-contacts-list {
   display: flex;
   margin-left: auto;
-  list-style: none;
 }
 
 .nav-logo {
+  font-family: Raleway;
   text-decoration: none;
   font-weight: 700;
   font-size: 26px;
@@ -194,6 +194,7 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 .section-title {
   margin-bottom: 50px;
@@ -207,7 +208,6 @@ p {
 /* преимущества */
 .pas-list {
   display: flex;
-  list-style: none;
 }
 
 .pas-item {
@@ -233,33 +233,23 @@ p {
   line-height: 1.71;
 }
 
-.pas-item::before {
-  display: block;
-  content: "";
+.pas-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: 120px;
   background-color: var(--background-team);
   margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.icon-antenna::before {
-  background-image: url("../images/antenna.svg");
-}
-.icon-clock::before {
-  background-image: url("../images/clock.svg");
-}
-.icon-diagram::before {
-  background-image: url("../images/diagram.svg");
-}
-.icon-astronaut::before {
-  background-image: url("../images/astronaut.svg");
+.icon-svg {
+  fill: var(--title);
 }
 
 /* работы */
 .work-list {
   display: flex;
-  list-style: none;
 }
 
 .work-item {
@@ -289,7 +279,6 @@ img {
 .team-list {
   display: flex;
   text-align: center;
-  list-style: none;
 }
 
 .team-item {
@@ -325,42 +314,69 @@ img {
 }
 .team-list-icon {
   display: flex;
-  list-style-type: none;
+  list-style: none;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
-.team-item-icon {
-  width: calc((100% -88px) / 4);
-  margin-right: 10px;
+.team-item-icon + .team-item-icon {
+  margin-left: 10px;
 }
 
-.team-item-icon:nth-child(4n) {
-  margin-right: 0;
-}
-
-.team-item-icon .icon-link:hover {
-  background-color: var(--accent);
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
 }
+.icon-link:hover {
+  background-color: var(--accent);
+}
 
-/* .icon-social {
-  padding: 22px;
-} */
+.icon-social {
+  fill: var(--icon-color);
+}
+
+.icon-link:hover .icon-social {
+  fill: var(--secondary);
+}
 /* наши клиенты */
 .clients-list {
   display: flex;
-  text-align: center;
-  list-style: none;
 }
 
 .clients-item {
   width: calc((100% -150px) / 6);
   margin-right: 30px;
+  border: 1px solid #afb1b8;
+
+  border-radius: 4px;
 }
 
-.clients-item:not(:last-child) {
+.clients-item:nth-child(6n) {
   margin-right: 0;
 }
 
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+}
+
+.icon-clients {
+  fill: var(--icon-color);
+}
+
+.clients-item:hover {
+  border: 1px solid var(--accent);
+}
+
+.clients-item:hover .icon-clients {
+  fill: var(--accent);
+}
 /* подвал сайта */
 
 .footer {
@@ -370,14 +386,20 @@ img {
   margin: 0 auto;
   max-width: 1600px;
 }
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact {
+  margin-right: 70px;
+}
 .address {
   margin-top: 20px;
   font-style: normal;
 }
-.address-list {
-  list-style: none;
-  padding: 0;
-}
+
 .address-link-contact {
   text-decoration: none;
   font-size: 14px;
@@ -394,6 +416,40 @@ img {
 .accent-fr {
   color: var(--secondary);
 }
+
+.plea-text {
+  margin-bottom: 20px;
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.plea-list {
+  display: flex;
+}
+
+.plea-item + .plea-item {
+  margin-left: 10px;
+}
+.plea-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #44454e;
+}
+
+.plea-link:hover {
+  background-color: var(--accent);
+}
+.icon-plea-social {
+  fill: var(--secondary);
+}
+
 /* Портфолио */
 
 .portfolio-section {
@@ -404,7 +460,6 @@ img {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  list-style: none;
 }
 
 .filter-item {
@@ -433,8 +488,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
-  list-style: none;
-  padding: 0;
 }
 
 .portfolio-footer {
@@ -447,6 +500,10 @@ img {
   margin: 15px;
 }
 
+.portfolio-item:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .portfolio-title {
   margin-bottom: 4px;
 
