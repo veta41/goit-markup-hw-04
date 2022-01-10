@@ -499,6 +499,9 @@ img {
 .portfolio-item {
   width: 370px;
   margin: 15px;
+  border-bottom: 1px solid var(--border-secondary-color);
+  border-right: 1px solid var(--border-secondary-color);
+  border-left: 1px solid var(--border-secondary-color);
 }
 
 .portfolio-item:hover {
@@ -513,10 +516,6 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
-.portfolio-img {
-  width: 355px;
-  height: 294px;
 }
 
 .portfolio-link {
