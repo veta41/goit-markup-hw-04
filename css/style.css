@@ -43,6 +43,10 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+a:focus,
+button:focus {
+  outline: none;
+}
 
 .page-header {
   max-width: 1600px;
@@ -140,7 +144,8 @@ p {
   padding-top: 32px;
 }
 
-.nav-contacts-item .nav-link:hover {
+.nav-contacts-item .nav-link:hover,
+.nav-contacts-item .nav-link:focus {
   color: var(--accent);
 }
 
@@ -148,7 +153,8 @@ p {
   fill: var(--primere-text);
 }
 
-.nav-contacts-item:hover .icon {
+.nav-link:hover .icon,
+.nav-link:focus .icon {
   fill: var(--accent);
 }
 /* секция героя */
@@ -329,7 +335,8 @@ img {
   height: 44px;
   border-radius: 50%;
 }
-.icon-link:hover {
+.icon-link:hover,
+.icon-link:focus {
   background-color: var(--accent);
 }
 
@@ -369,11 +376,14 @@ img {
   fill: var(--icon-color);
 }
 
-.clients-item:hover {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--accent);
+  padding: 15px 31px;
 }
 
-.clients-item:hover .icon-clients {
+.clients-link:hover .icon-clients,
+.clients-link:focus .icon-clients {
   fill: var(--accent);
 }
 /* подвал сайта */
@@ -445,6 +455,7 @@ img {
 .plea-link:hover {
   background-color: var(--accent);
 }
+
 .icon-plea-social {
   fill: var(--secondary);
 }
@@ -470,7 +481,11 @@ img {
 }
 
 .filter-btn {
+  font-family: Roboto;
   border: none;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -482,6 +497,8 @@ img {
 .filter-btn:focus {
   color: var(--secondary);
   background-color: var(--accent);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -504,8 +521,8 @@ img {
 
 .portfolio-item:hover,
 .portfolio-item:focus {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-title {
   margin-bottom: 4px;
