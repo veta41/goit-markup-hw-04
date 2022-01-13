@@ -43,10 +43,6 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
-a:focus,
-button:focus {
-  outline: none;
-}
 
 .page-header {
   max-width: 1600px;
@@ -167,8 +163,9 @@ button:focus {
     ),
     url("../images/hero_img.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
@@ -318,9 +315,7 @@ img {
 }
 .team-list-icon {
   display: flex;
-  list-style: none;
-  padding-left: 32px;
-  padding-right: 32px;
+  justify-content: center;
 }
 
 .team-item-icon + .team-item-icon {
@@ -354,11 +349,9 @@ img {
 }
 
 .clients-item {
-  width: calc((100% -150px) / 6);
+  width: calc((100% - 150px) / 6);
   margin-right: 30px;
-  border: 1px solid var(--icon-color);
-
-  border-radius: 4px;
+  height: 92px;
 }
 
 .clients-item:nth-child(6n) {
@@ -369,7 +362,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 32px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
 }
 
 .icon-clients {
@@ -378,8 +374,7 @@ img {
 
 .clients-link:hover,
 .clients-link:focus {
-  border: 1px solid var(--accent);
-  padding: 15px 31px;
+  border-color: var(--accent);
 }
 
 .clients-link:hover .icon-clients,
@@ -398,7 +393,7 @@ img {
 
 .footer-flex {
   display: flex;
-  flex-wrap: wrap;
+  align-items: baseline;
 }
 
 .contact {
@@ -519,8 +514,13 @@ img {
   border-left: 1px solid var(--border-secondary-color);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -532,10 +532,6 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
-
-.portfolio-link {
-  text-decoration: none;
 }
 
 .portfolio-text {
